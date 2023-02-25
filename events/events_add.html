@@ -1,0 +1,10 @@
+{% extend 'base.html' %}
+
+{% block content%}
+<form method="POST" class = 'my-5' enctype="multipart/form-data">
+    {% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="save" class="btn btn-dark">
+<input type="Reset" value="cancel" class="btn btn-lignt">
+</form>
+{%endblock%}
